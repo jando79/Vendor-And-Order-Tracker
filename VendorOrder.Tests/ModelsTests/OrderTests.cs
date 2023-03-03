@@ -20,6 +20,15 @@ namespace VendorOrder.Tests
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string description = "bread";
+      Order newOrder = new Order(description);
+      string result = newOrder.Description;
+      Assert.AreEqual(description, result);
+    }
+
   
   
   
