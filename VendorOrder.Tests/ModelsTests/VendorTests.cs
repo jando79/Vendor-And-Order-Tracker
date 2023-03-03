@@ -10,7 +10,7 @@
    {
     public void Dispose()
     {
-      Category.ClearAll();
+      Vendor.ClearAll();
     }  
     
     [TestMethod]
@@ -63,7 +63,7 @@
     {
       string description = "bread.";
       Order newOrder = new Order(description);
-      List<Order> newOrder = new List<Order> { newItem };
+      List<Order> newList = new List<Order> { newOrder };
       string name = "VendorCO 1";
       Vendor newVendor = new Vendor(name);
       newVendor.AddOrder(newOrder);
