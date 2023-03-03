@@ -29,6 +29,17 @@ namespace VendorOrder.Tests
       Assert.AreEqual(description, result);
     }
 
+     [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      string description = "bread";
+      Order newOrder = new Order(description);
+      string updatedDescription = "pastry";
+      newOrder.Description = updatedDescription;
+      string result = newOrder.Description;
+      Assert.AreEqual(updatedDescription, result);
+    }
+
   
   
   
