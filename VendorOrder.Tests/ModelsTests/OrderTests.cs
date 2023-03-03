@@ -72,14 +72,13 @@ namespace VendorOrder.Tests
     [TestMethod]
     public void Find_ReturnsCorrectItem_Item()
     {
-    //Arrange
       string description01 = "bread";
       string description02 = "pastry";
       Order newOrder1 = new Order(description01);
       Order newOrder2 = new Order(description02);
       Order result = Order.Find(2);
       Assert.AreEqual(newOrder2, result);
-  }
+    }
   
   }
 }
