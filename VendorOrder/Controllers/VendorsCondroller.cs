@@ -20,6 +20,13 @@ namespace VendorOrder.Controllers
       return View();
     }
 
+    // [HttpGet("/vendors/clear")]
+    // public ActionResult Clear()
+    // {
+    //   Vendors.ClearAll();
+    //   return RedirectToAction("Index";)
+    // }
+
     [HttpPost("/vendors")]
     public ActionResult Create(string vendorName)
     {
