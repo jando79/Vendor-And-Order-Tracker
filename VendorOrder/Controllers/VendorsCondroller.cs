@@ -5,7 +5,7 @@ using VendorOrder.Models;
 
 namespace VendorOrder.Controllers
 {
-  public class VendorController : Controller
+  public class VendorsController : Controller
   {
     [HttpGet("/vendors")]
     public ActionResult Index()
@@ -45,8 +45,8 @@ namespace VendorOrder.Controllers
       Vendor foundVendor = Vendor.Find(vendorId);
       Order newOrder = new Order(orderDescription);
       foundVendor.AddOrder(newOrder);
-      List<Order> vendorItems = foundVendor.Orders;
-      model.Add("orders", vendorItems);
+      List<Order> vendorOrders = foundVendor.Orders;
+      model.Add("orders", vendorOrders);
       model.Add("vendor", foundVendor);
       return View("Show", model);
     }
